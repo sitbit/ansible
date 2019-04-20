@@ -1,5 +1,23 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install htop
-    apt: name=htop
+  - name: Install packages
+    apt: name={{item}}
+    with_items:
+      - htop
+      - vlc
+      - geany
+      - geany-plugins
+      - galculator
+      - ghex
+      - okular
+      - qtcreator
+      - steam
+      - calibre
+      - claws-mail
+      - hexchat
+      - qbittorrent
+      - wireshark
+      - texstudio
+      - mc
+      - tmux
