@@ -1,23 +1,23 @@
 - hosts: localhost
   become: true
   tasks:
-  - Install packages
-    apt: name= [ 
-        'htop'
-      , 'vlc'
-      , 'geany'
-      , 'geany-plugins'
-      , 'galculator'
-      , 'ghex'
-      , 'okular'
-      , 'qtcreator'
-      , 'steam'
-      , 'calibre'
-      , 'claws-mail'
-      , 'hexchat'
-      , 'qbittorrent'
-      , 'wireshark'
-      , 'texstudio'
-      , 'mc'
-      , 'tmux'
-      ]
+  - name: Install packages
+    apt: name={{item}}
+    with_items:
+      - htop
+      - vlc
+      - geany
+      - geany-plugins
+      - galculator
+      - ghex
+      - okular
+      - qtcreator
+      - steam
+      - calibre
+      - claws-mail
+      - hexchat
+      - qbittorrent
+      - wireshark
+      - texstudio
+      - mc
+      - tmux
