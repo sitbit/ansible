@@ -1,25 +1,11 @@
 ---
 - hosts: localhost
   become: true
+  pre_tasks:
+  - name: Update repositories
+    apt: update_cache=yes
+    changed_when: False
+    
   tasks:
-  - name: Install packages
-    apt: name={{items}}
-    vars:
-      items:
-        - htop
-        - vlc
-        - geany
-        - geany-plugins
-        - galculator
-        - ghex
-        - okular
-        - qtcreator
-        - steam
-        - calibre
-        - claws-mail
-        - hexchat
-        - qbittorrent
-        - wireshark
-        - texstudio
-        - mc
-        - tmux
+  - include: tasks/packages.yml
+    
