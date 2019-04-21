@@ -3,22 +3,23 @@
   become: true
   tasks:
   - name: Install packages
-    apt: name={{item}}
-    with_items:
-      - htop
-      - vlc
-      - geany
-      - geany-plugins
-      - galculator
-      - ghex
-      - okular
-      - qtcreator
-      - steam
-      - calibre
-      - claws-mail
-      - hexchat
-      - qbittorrent
-      - wireshark
-      - texstudio
-      - mc
-      - tmux
+    apt: name={{items}}
+    vars:
+      items:
+        - htop
+        - vlc
+        - geany
+        - geany-plugins
+        - galculator
+        - ghex
+        - okular
+        - qtcreator
+        - steam
+        - calibre
+        - claws-mail
+        - hexchat
+        - qbittorrent
+        - wireshark
+        - texstudio
+        - mc
+        - tmux
