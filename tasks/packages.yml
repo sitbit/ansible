@@ -17,5 +17,7 @@
       - qbittorrent
       - wireshark
       - texstudio
+      - python2
+      - python3
       - mc
       - tmux
