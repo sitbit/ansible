@@ -9,6 +9,7 @@
   tasks:
   - include: tasks/remove_tor.yml
   - include: tasks/remove_galculator.yml
+#  - include: tasks/add_exp_repo.yml
   - include: tasks/users.yml
   - include: tasks/cron.yml
   - include: tasks/packages.yml
