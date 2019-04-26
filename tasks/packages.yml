@@ -22,4 +22,4 @@
       - mc
       - tmux
       - passwordsafe
-      - torbrowser-launcher
+#      - torbrowser-launcher
